@@ -1,0 +1,18 @@
+Open Server:
+
+./echoserver (wr or rp)
+
+example: ./echoserver wr
+
+Open client:
+
+./client (rclient or wclient) portnumber rate filename directory timeout 
+
+example: ./client rclient 54621 1 file.txt ohaio 1
+
+
+Each thread of the 'Writer' generates 2 mb text and writes it to the textfile.
+
+Each thread of the 'Reader' reads the text from textfile, creates new file in the directory and writes copied text.
+
+The semaphores are used to solve Reader-Writer problem. 
